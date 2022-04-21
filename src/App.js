@@ -1,24 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import { Download, Features, SectionWrapper, SectionWrapper2 } from './components';
+import assets from './assets';
+import styles from './styles/Global';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+   
+  
+    <SectionWrapper 
+    //placer en props dans le composants SectionWrapper 
+    title="FAITES VOUS UNE PLACE DANS LA BLOCKCHAIN AVEC VOS NFT."
+    description="Les NFT peuvent être achetés et échangés comme n’importe quelle autre cryptomonnaie basée sur Ethereum."
+    
+    showBtn 
+    mockupImg={assets.anime}
+    banner= "banner"
+    reverse
+    />
+
+    <SectionWrapper2 
+    //placer en props dans le composants SectionWrapper 
+    title="Smart User Interface Marketplace."
+    description="Experience a buttery UI of Suvorm NFT Marketplace. Smooth constant colors of a fluent UI design."
+    
+    mockupImg={assets.phone1}
+    reverse
+    />
+
+    <Features />
+    <Download 
+      // mockupImg={assets.decolle}
+    />
+
+
+    </>
+    
   );
 }
 
